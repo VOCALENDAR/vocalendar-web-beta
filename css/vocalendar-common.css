@@ -1,0 +1,397 @@
+/* vocalendar-common.jp */
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap&subset=japanese');
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1rem;
+}
+
+/** BASIC STYLES **/
+a {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+.headerLogo {
+  margin-top: -8px;
+  height: 28px;
+}
+h2 {
+  color: #444;
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1.2em;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #666;
+  line-height: 1em;
+  margin-top: .em;
+}
+dl,
+dt,
+dd {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* PROPATIES for SCRIPTS */
+.windowHeight {
+  display: block;
+  width: 100%;
+}
+
+/* CONTENTS LAYOUTS */
+.section {
+  padding-top: 60px;
+}
+#main {
+  background-color: white;
+}
+#apps {
+  background-color: #f0f0f0;
+}
+#editors {
+  background-color: white;
+}
+#postbox {
+  background-color: #D9EFED;
+}
+
+
+h1 {
+  margin-top: 18px;
+  margin-left: 60px;
+  font-size: 1rem;
+  color: #707070;
+}
+#vocalendar-logo-h1 {
+  height: 14px;
+  opacity: 0.5;
+}
+
+/** CALENDAR **/
+#calendar {
+  width: 100%;
+  padding: 0 120px 0 60px;
+  background-image: url('/images/loadingcircle.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#calendar iframe {
+  width: 100%;
+}
+
+/** NAVIGATIONS **/
+#globalNav {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(255,255,255,0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 20;
+}
+#contentsNav {
+  position: absolute;
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 16px 0 0;
+  padding: 0;
+  top: 0;
+  right: 60px;
+}
+#contentsNav li {
+  display: inline;
+  margin: 0;
+  padding: 0 .5em;
+  font-size: .875rem;
+  font-weight: 700;
+  line-height: 1em;
+}
+#contentsNav li a {
+  color: black;
+  opacity: .4;
+  transition: opacity 0.5s;
+}
+#contentsNav li a:hover {
+  opacity: .75;
+  transition: opacity 0.5s;
+}
+#contentsNav li.attention a {
+  opacity: 1;
+  color: #DB005D;
+  transition: opacity 0.5s;
+}
+#sideNav {
+  display: block;
+  position: fixed;
+  width: 100px;
+  top: 0px;
+  right: 0px;
+  background-color: rgba(255,128,255,0);
+  z-index: 10;
+}
+#appsNav {
+  position: absolute;
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  top: 140px;
+}
+#appsNav li {
+  display: block;
+  margin: 0 0 24px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1em;
+  text-align: center;
+}
+#appsNav img {
+  width: 36px;
+  opacity: .4;
+  transition: opacity 0.5s;
+}
+#appsNav img:hover {
+  opacity: .75;
+  transition: opacity 0.5s;
+}
+#pageNav {
+  position: absolute;
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+  top: 2000px;
+  left: 32px;
+}
+#pageNav li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  opacity: .4;
+  transition: opacity 0.5s;
+}
+#pageNav li.current {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+#pageNav li a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,0);
+  width: 32px;
+  height: 32px;
+}
+#pageNav li:hover {
+  opacity: .75;
+  transition: opacity 0.5s;
+}
+#pageNav li .square {
+  display: block;
+  position: relative;
+  border: 2px solid black;
+  width: 16px;
+  height: 16px;
+  margin: 8px;
+}
+#pageNav li .square:after {
+  content:  '';
+  display: block;
+  position: relative;
+  background-color: black;
+  width: 8px;
+  height: 8px;
+  margin: 2px;
+  opacity: .4;
+}
+#pageNav li.current .square:after {
+  opacity: 1;
+}
+
+/** ABOUT **/
+#about {
+  background-color: white;
+}
+h2 img {
+  height: 28px;
+}
+.new-miku {
+  overflow: visible;
+  background-image: url('');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom -50px right -10px;
+}
+.lead {
+  margin-top: 1.5em;
+  color: #555;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.5em;
+}
+#about .note {
+  margin-top: 1.7em;
+  color: #888;
+  font-size: 0.8rem;
+  font-weight: normal;
+  line-height: 1.4em;
+}
+
+/** APPS **/
+.store {
+  margin-top: 40%;
+}
+.qrCode {
+  margin-top: 10%;
+}
+.qrCode img {
+  width: 80%;
+}
+.devicesBg {
+  overflow: visible;
+  background-image: url('');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left -25px;
+}
+#apps .note {
+  margin: 0;
+  color: #888;
+  font-size: 0.9rem;
+  font-weight: normal;
+  line-height: 1em;
+}
+
+/** EDITORS **/
+#editors h2 {
+  margin-bottom: 1.2em;
+}
+.members {
+  padding: 16px 10rem;
+}
+.accountIcon {
+}
+.accountIcon img {
+  width: 95%;
+  border-radius: 100%;
+  border: 1px solid #ccc;
+}
+.hundleName {
+  color: #555;
+  margin: 16px 0 8px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1em;
+}
+.accountName {
+  color: #888;
+  font-size: 1.2rem;
+  font-weight: medium;
+  line-height: 1em;
+}
+
+/** POSTBOX **/
+.postboxBg {
+  overflow: visible;
+  background-image: url('');
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: top 60px left 25px;
+}
+.fromApps,
+.fromWeb {
+  margin-top: 40px;
+}
+.from {
+  margin: 0;
+  color: #555;
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 1em;
+}
+.by {
+  margin: 0;
+  color: #555;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.by a,
+.by a:hover,
+.by a:visited {
+  color: #555;
+  text-decoration: underline;
+}
+
+/** COLLABORATIIONS **/
+#collaborations {
+  padding-top: 0;
+  background-color: white;
+}
+#miraikouro {
+  position: relative;
+  background-size: cover;
+  background-image: url('/images/miraikouro-bg.jpg');
+  overflow: hidden;
+  background-position: center center;
+}
+#miraikouro-miku {
+  position: absolute;
+  width: 100%;
+  bottom: 15%;
+  right: 0%;
+}
+#miraikouro-logo {
+  width: 60%;
+  position: absolute;
+  top: 15%;
+}
+#miraiyosou {
+  background-color: white;
+}
+
+/** FOOTER **/
+#footer {
+  background-color: #999;
+  padding-bottom: 60px;
+}
+#footer h2 img {
+  width: 100%;
+  margin-left: 2%;
+}
+.credit {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: normal;
+  line-height: 1.4em;
+  opacity: .75;
+}
+.icons {
+  margin: 2rem 0 3rem;
+}
+.icons img {
+  width: 5rem;
+}
